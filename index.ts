@@ -1,5 +1,5 @@
 async function input(): Promise<number> {
-    return 10;
+    return "L".charCodeAt(0);
 }
 
 
@@ -46,7 +46,7 @@ async function execute(code: string, array: number[]): Promise<string> {
                 codePoint++;
                 break;
             case ',':
-                array[point] += await input();
+                array[point] = await input();
                 codePoint++;
                 break;
             case '[':
